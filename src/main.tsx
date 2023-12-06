@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import {UseLayoutEffectDemo1, UseLayoutEffectDemo2} from './hooks/builtin/useLayoutEffect-demo.tsx'
 import UseStateDemo from './hooks/builtin/useState-demo.tsx'
+import UseEffectDemo from './hooks/builtin/useEffect-demo.tsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -23,6 +24,12 @@ const router = createBrowserRouter([
     path: 'useState',
     element: (
       <UseStateDemo />
+    )
+  },
+  {
+    path: 'useEffect',
+    element: (
+      <UseEffectDemo  />
     )
   }
 ]);

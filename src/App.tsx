@@ -18,8 +18,9 @@ function App() {
       <h1>Learn React Hooks</h1>
 
       <div style={{display: 'flex', flexDirection: 'column'}}>
-        <Link to="useLayoutEffect">useLayoutEffect</Link>
         <Link to="useState">useState</Link>
+        <Link to="useEffect">useEffect</Link>
+        <Link to="useLayoutEffect">useLayoutEffect</Link>
       </div>
     </>
   )
