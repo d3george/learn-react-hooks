@@ -4,6 +4,7 @@ import './index.css'
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import {UseLayoutEffectDemo1, UseLayoutEffectDemo2} from './hooks/builtin/useLayoutEffect-demo.tsx'
+import UseStateDemo from './hooks/builtin/useState-demo.tsx'
 const router = createBrowserRouter([
   {
     path: "/",
@@ -17,8 +18,13 @@ const router = createBrowserRouter([
         <UseLayoutEffectDemo2 />
       </div>
     )
-    
   },
+  {
+    path: 'useState',
+    element: (
+      <UseStateDemo />
+    )
+  }
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <RouterProvider router={router} />
