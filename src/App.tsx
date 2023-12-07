@@ -20,6 +20,7 @@ function App() {
       <div style={{display: 'flex', flexDirection: 'column'}}>
         <Link to="useState">useState</Link>
         <Link to="useEffect">useEffect</Link>
+        <Link to="useMemo">useMemo</Link>
         <Link to="useLayoutEffect">useLayoutEffect</Link>
       </div>
     </>

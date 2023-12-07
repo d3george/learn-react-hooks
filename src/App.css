@@ -35,8 +35,22 @@
 
 .card {
   padding: 2em;
+  border: 1px solid cornflowerblue;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+pre {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Consolas, monospace;
+  text-align: left;
+}
+
+code {
+  font-family: Consolas, monospace;
+  color: palevioletred;
 }
