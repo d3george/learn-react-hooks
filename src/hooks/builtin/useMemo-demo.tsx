@@ -34,10 +34,12 @@ function Demo1() {
 
       <pre style={{display: 'flex', flexDirection: 'column', gap: 20}}>
         <div>items是一个长度为29_999_999的数组，其中最后一项isSelected属性为true</div>
-        <div>const selectedItem = items.find((item) =&gt; item.isSelected) 是一个极其耗时的操作</div>
+        <div><code>const selectedItem = items.find((item) =&gt; item.isSelected)</code>  是一个极其耗时的操作</div>
         <div>
-          &#x1F389;当连续点击Increment时，Count变化会出现跳跃现象
+          &#x1F389;当快速点击Increment时，Count变化会出现跳跃现象
         </div>
+      </pre>
+      <pre className="mt-4">
         <div>👇 使用 <code>useMemo</code> 可以优化</div>
         <code>const cachedValue = useMemo(calculateValue, dependencies)</code>
         <div>useMemo 只有在dependencies改变时才重新计算cachedValue</div>
@@ -63,7 +65,7 @@ function Demo2() {
         <button onClick={() => setCount(count + 1)}>Increment</button>
       </div>
 
-      <pre>const selectedItem =  useMemo(() =&gt; items.find((item) =&gt; item.isSelected), [items]) </pre>
+      <pre><code> const selectedItem =  useMemo(() =&gt; items.find((item) =&gt; item.isSelected), [items]) </code> </pre>
  
     </div>
   ) 

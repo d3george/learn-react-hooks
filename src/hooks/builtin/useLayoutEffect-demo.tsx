@@ -15,6 +15,7 @@ const UseLayoutEffectDemo = ()=> {
 export default UseLayoutEffectDemo
 
 const  Demo1 = () => {
+  console.log('<-------- demo1 render --------->')
   const [userId, setUserId] = useState(userIds[0]);
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -23,21 +24,20 @@ const  Demo1 = () => {
   while (performance.now() - now < 200) {
     // Do nothing for a bit...
   }
-  console.log('render');
 
   useEffect(() => {
-    console.log('paint done');
+    console.log('demo1: paint done');
   });
 
   useEffect(() => {
     setIsAdmin(userId === userIds[0]);
-    console.log('isAdmin change, trigger');
+    console.log('demo1: isAdmin change, trigger');
   }, [userId]);
 
   const handleChange = () => {
     const otherId = userIds.find((id) => id !== userId)!;
     setUserId(otherId);
-    console.log('userId change, trigger');
+    console.log('demo1: userId change, trigger');
   };
 
   return (
@@ -60,6 +60,7 @@ const  Demo1 = () => {
 };
 
 const Demo2 = () => {
+  console.log('<-------- demo2 render --------->')
   const [userId, setUserId] = useState(userIds[0]);
   const [isAdmin, setIsAdmin] = useState(false);
 
@@ -68,21 +69,20 @@ const Demo2 = () => {
   while (performance.now() - now < 200) {
     // Do nothing for a bit...
   }
-  console.log('render');
 
   useEffect(() => {
-    console.log('paint done');
+    console.log('demo2: paint done');
   });
 
   useLayoutEffect(() => {
     setIsAdmin(userId === userIds[0]);
-    console.log('isAdmin change, trigger');
+    console.log('demo2: isAdmin change, trigger');
   }, [userId]);
 
   const handleChange = () => {
     const otherId = userIds.find((id) => id !== userId)!;
     setUserId(otherId);
-    console.log('userId change, trigger');
+    console.log('demo2: userId change, trigger');
   };
 
   return (

@@ -7,6 +7,7 @@ import UseLayoutEffectDemo  from './hooks/builtin/useLayoutEffect-demo.tsx'
 import UseStateDemo from './hooks/builtin/useState-demo.tsx'
 import UseEffectDemo from './hooks/builtin/useEffect-demo.tsx'
 import UseMemoDemo from './hooks/builtin/useMemo-demo.tsx'
+import UseCallback from './hooks/builtin/useCallback-demo.tsx'
 
 const router = createBrowserRouter([
   {
@@ -16,7 +17,8 @@ const router = createBrowserRouter([
       { path: "useLayoutEffect", element: ( <UseLayoutEffectDemo />) },
       { path: 'useState', element: ( <UseStateDemo />) },
       { path: 'useEffect', element: ( <UseEffectDemo  />) },
-      { path: 'useMemo', element: ( <UseMemoDemo />) }
+      { path: 'useMemo', element: ( <UseMemoDemo />) },
+      { path: 'useCallback', element: ( <UseCallback />) }
     ]
   },
 
