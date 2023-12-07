@@ -12,16 +12,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    children: [
+      { path: "useLayoutEffect", element: ( <UseLayoutEffectDemo />) },
+      { path: 'useState', element: ( <UseStateDemo />) },
+      { path: 'useEffect', element: ( <UseEffectDemo  />) },
+      { path: 'useMemo', element: ( <UseMemoDemo />) }
+    ]
   },
-  {
-    path: "useLayoutEffect",
-    element: (
-      <UseLayoutEffectDemo />
-    )
-  },
-  { path: 'useState', element: ( <UseStateDemo />) },
-  { path: 'useEffect', element: ( <UseEffectDemo  />) },
-  { path: 'useMemo', element: ( <UseMemoDemo />) }
+
 ]);
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <RouterProvider router={router} />

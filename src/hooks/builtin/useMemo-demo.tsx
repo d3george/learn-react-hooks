@@ -10,7 +10,6 @@ export default function UseMemoDemo () {
   return (
     <div>
       <Demo1 />
-
       <Demo2 />
     </div>
   )

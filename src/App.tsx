@@ -1,7 +1,8 @@
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import {Link} from 'react-router-dom'
 import './App.css'
+import Nav from './nav'
+import { Outlet } from 'react-router-dom'
 
 function App() {
 
@@ -16,12 +17,10 @@ function App() {
         </a>
       </div>
       <h1>Learn React Hooks</h1>
+      <Nav />
 
-      <div style={{display: 'flex', flexDirection: 'column'}}>
-        <Link to="useState">useState</Link>
-        <Link to="useEffect">useEffect</Link>
-        <Link to="useMemo">useMemo</Link>
-        <Link to="useLayoutEffect">useLayoutEffect</Link>
+      <div>
+        <Outlet />
       </div>
     </>
   )
