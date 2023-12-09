@@ -10,6 +10,7 @@ import UseMemoDemo from './hooks/builtin/useMemo-demo.tsx'
 import UseCallback from './hooks/builtin/useCallback-demo.tsx'
 import UseRefDemo from './hooks/builtin/useRef-demo.tsx'
 import UseReducerDemo from './hooks/builtin/useReducer-demo.tsx'
+import UseImperativeHandleDemo from './hooks/builtin/useImperativeHandle-demo.tsx'
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,7 @@ const router = createBrowserRouter([
       { path: 'useCallback', element: ( <UseCallback />) },
       { path: 'useRef', element: ( <UseRefDemo />) },
       { path: 'useReducer', element: ( <UseReducerDemo />) },
+      { path: 'useImperativeHandle', element: ( <UseImperativeHandleDemo />) },
     ]
   },
 
