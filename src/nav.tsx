@@ -3,7 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 export default function Nav () {
   const {pathname} = useLocation()
-  const routePaths = ['useState', 'useEffect', 'useMemo', 'useCallback', 'useLayoutEffect']
+  const routePaths = ['useState', 'useEffect', 'useMemo', 'useCallback', 'useRef', 'useLayoutEffect']
 
   const isActive = (path: string) => {
     return path === pathname.split('/')[1] ? true : false;
